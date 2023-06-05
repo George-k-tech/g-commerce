@@ -1,9 +1,12 @@
-import Image from 'next/image'
+import Image from "next/image";
+import { getDogsImage } from "./image/page";
 
-export default function Home() {
+export default async function Home() {
+  const dog = await getDogsImage();
   return (
    <div>
-    <h1>hello george</h1>
+<Image src={dog.message} width={200} height={200}/>
+<p>{dog.status}</p>
    </div>
   )
 }
