@@ -5,7 +5,7 @@ export default async function Home() {
   const dog = await getDogsImage();
   return (
    <div>
-<Image src={dog.message} width={200} height={200}/>
+<Image src={dog.message} width={200} height={200} alt="dogs picture"/>
 <p>{dog.status}</p>
    </div>
   )
